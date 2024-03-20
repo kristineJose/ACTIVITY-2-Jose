@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     Assignment
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Assignment</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <div *ngIf = "isLoading"> {{LoadingText}} </div>
+    {{ObjArray}}
+    <p>{{data}}</p>
+    <ion-button (click)="authenticate()">Authenticate</ion-button> 
+    <ion-button (click)="unauthenticate()">Unauthenticate</ion-button>
+    <ion-button (click)="showObject()"> Show Object</ion-button>
+    <ion-button (click)="addToObject()"> Add 1 to Object</ion-button>
+  </div>
+</ion-content>
+
