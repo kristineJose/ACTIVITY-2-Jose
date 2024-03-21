@@ -1,0 +1,7 @@
+{
+  "name": "custom-page",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

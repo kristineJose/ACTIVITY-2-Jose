@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Home Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <h3><p><b>Welcome User! You can click the buttons below : D</b></p></h3>
+    <ion-button href="new-page">go by link</ion-button>
+    <ion-button (click)="goByEvent()">go by event</ion-button>
+    <ion-button (click)="goWithAuthorization()">authorize</ion-button>
+  </div>
+</ion-content>

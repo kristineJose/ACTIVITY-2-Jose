@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title> New Page </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true">
+    <div style="text-align: center;">
+      <h2><p><b>YAY! You are now in New Page : D</b></p></h2>
+      <ion-button href="another-page">Go by link</ion-button>
+      <ion-button (click)="goByEvent()">Go by event</ion-button>
+      <ion-button (click)="goWithAuthorization()">authorize</ion-button>
+    </div>
+  </ion-content>
+  
