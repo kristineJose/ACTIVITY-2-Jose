@@ -1,0 +1,86 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title><h1>Welcome, {{username}}!</h1></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">  
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">dashboard</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Movie Selection</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-fab slot="fixed" vertical="top" horizontal="end" [edge]="true">
+      <ion-fab-button>
+        <ion-icon name="chevron-down-circle"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="bottom">
+        <ion-fab-button>
+          <ion-icon name="document"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-icon name="color-palette"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-icon name="globe"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+    <br>
+    <br>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home">
+          <ion-icon name="home"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="component">
+          <ion-label>Component</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs> 
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title>Movie 3</ion-card-title>
+      <ion-card-subtitle>How to Survive</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="my-card">
+    <ion-card-header>
+      <ion-card-title>Movie 2</ion-card-title>
+      <ion-card-subtitle>Something about stars</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="cards">
+    <ion-card-header>
+      <ion-card-title>Movie 2</ion-card-title>
+      <ion-card-subtitle>Star Wars</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+  </ion-card>
+
+ 
+  <ion-button (click) = logout()> LOG OUT</ion-button>
+  
+</ion-content>
