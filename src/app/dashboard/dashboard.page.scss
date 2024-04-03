@@ -1,4 +1,8 @@
-.my-card {
+
+:host {
+    --ion-background-color: #1e1e1e;
+    --ion-text-color: #ffffff;
+}.my-card {
     ion-card-header {
       background-color: rgb(20, 129, 65);
   
@@ -24,6 +28,14 @@
           color: rgb(255, 255, 255);
         }
       }
+
 }
+ion-title h3 {
+  text-align: center;
+}
+
+
+
+
 
   
