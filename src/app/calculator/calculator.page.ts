@@ -32,7 +32,7 @@ export class CalculatorPage implements OnInit {
   clearResult() {
     this.result = '';
   }
-  clearOneNumber() {
+  clearNumber() {
     if (this.result.length > 0) {
       this.result = this.result.slice(0, -1);
     }
