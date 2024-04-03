@@ -32,6 +32,11 @@ export class CalculatorPage implements OnInit {
   clearResult() {
     this.result = '';
   }
+  clearOneNumber() {
+    if (this.result.length > 0) {
+      this.result = this.result.slice(0, -1);
+    }
+  }
   dashboard(){
     this.router.navigate(['dashboard/home'])
     this.authenticate.authenticated = true;
