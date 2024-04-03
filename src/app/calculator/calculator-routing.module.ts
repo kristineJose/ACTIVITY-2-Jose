@@ -6,8 +6,8 @@ import { CalculatorPage } from './calculator.page';
 const routes: Routes = [
   {
     path: '',
-    component: CalculatorPage
-  }
+    component: CalculatorPage,
+  },
 ];
 
 @NgModule({

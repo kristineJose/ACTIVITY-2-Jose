@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../authentication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-calculator',
@@ -8,12 +9,14 @@ import { AuthenticationService } from '../authentication.service';
 })
 export class CalculatorPage implements OnInit {
 
-  constructor(private authenticate: AuthenticationService) { }
+  constructor(private authenticate: AuthenticationService, private router: Router) { }
 
   ngOnInit() {
     this.authenticate.authenticated = false;
+    this.username = localStorage.getItem('username') || '';
   }
   result: string = '';
+  username: string = '';
 
   showResult(value: string) {
     this.result += value;
@@ -26,10 +29,12 @@ export class CalculatorPage implements OnInit {
       this.result = 'Error';
     }
   }
-
   clearResult() {
     this.result = '';
   }
- 
+  dashboard(){
+    this.router.navigate(['dashboard/home'])
+    this.authenticate.authenticated = true;
+  }
 }
 

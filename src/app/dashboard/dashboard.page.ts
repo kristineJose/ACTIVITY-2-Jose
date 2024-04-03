@@ -15,7 +15,7 @@ username: string = '';
 
   ngOnInit() {
     this.username = localStorage.getItem('username') || '';
-    this.authenticate.authenticated = false;
+    
   }
 
   logout(){
@@ -23,8 +23,8 @@ username: string = '';
    
   } 
   calculator(){
+    this.authenticate.authenticated = false;
     this.router.navigate(['calculator']);
-    this.authenticate.authenticated = true;
-    
+    this.authenticate.authenticated = true;   
   }
 }
