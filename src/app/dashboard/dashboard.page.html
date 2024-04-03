@@ -41,7 +41,7 @@
         <ion-icon name="home"></ion-icon>
         <ion-label>Home</ion-label>
       </ion-tab-button>
-      <ion-tab-button tab="calculator">
+      <ion-tab-button (click)="calculator()" tab="calculator">
         <ion-icon name="calculator"></ion-icon>
         <ion-label>Calculator</ion-label>
       </ion-tab-button>
@@ -85,3 +85,4 @@
   <ion-button (click)="logout()" expand="block">LOG OUT</ion-button>
   <ion-checkbox>I agree to the terms and conditions</ion-checkbox>
 </ion-content>
+
