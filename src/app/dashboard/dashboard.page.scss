@@ -1,0 +1,67 @@
+:host {
+    --ion-background-color: #303e41;
+    --ion-text-color: #ffffff;
+}
+
+  /* Page styles */
+  ion-header {
+    ion-toolbar {
+      ion-title {
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+  }
+  #container{   
+    text-align: center;
+  }
+  
+
+  .card{
+    ion-card-header{
+        background-color: rgb(38, 50, 51);
+    }
+    ion-card-subtitle{
+        color: #ffffff;
+        text-align: center;
+    }
+  }
+  ion-content {
+    ion-img {
+      display: block;
+      margin-top: 30px;
+      height: 150px;
+    }
+  
+    ion-card {
+      margin-top: 20px;
+      color: rgb(100, 192, 192);
+      background-color: rgb(38, 50, 51);
+      ion-card-header {
+       
+        ion-card-title {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+  
+      ion-card-content {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    }
+  
+    ion-tabs {
+      ion-tab-bar {
+        ion-tab-button {
+          ion-icon {
+            font-size: 24px;
+          }
+          ion-label {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  
