@@ -15,10 +15,10 @@ export class AuthenticationService {
   } 
   canActivate(){
    if(localStorage.getItem('loggedin') =='true'){
-    this.route.navigate(['sign-in']);
       return true;
    } else{
-     return this.authenticated;
+   this.route.navigate(['sign-in']);
+   return false;
   }
 }
 }
