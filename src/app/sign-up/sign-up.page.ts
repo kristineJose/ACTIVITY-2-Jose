@@ -34,7 +34,7 @@ export class SignUpPage implements OnInit {
     .then((userCredentail) => {
       const user = userCredentail.user;
       this.alertP('Success', 'SignUp Successful!')
-      this.route.navigate(['login']);
+      this.route.navigate(['sign-in']);
     })
     .catch ((error) => {
       const errorCode = error.code;
