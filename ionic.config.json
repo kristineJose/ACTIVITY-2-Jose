@@ -1,0 +1,7 @@
+{
+  "name": "crup-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
