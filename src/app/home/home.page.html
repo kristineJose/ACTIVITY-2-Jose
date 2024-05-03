@@ -1,20 +1,65 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Books</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="container">
+    <!-- Form for adding/editing books -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Add/Edit Book</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Title</ion-label>
+          <ion-input [(ngModel)]="user.title"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Author</ion-label>
+          <ion-input [(ngModel)]="user.author"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Price</ion-label>
+          <ion-input type="number" [(ngModel)]="user.price"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Genre</ion-label>
+          <ion-input [(ngModel)]="user.genre"></ion-input>
+        </ion-item>
+        <ion-button expand="block" (click)="save()">Save</ion-button>
+        <ion-button expand="block" (click)="delete(user)" color="danger" *ngIf="user.title">Delete</ion-button>
+      </ion-card-content>
+    </ion-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <!-- Book List -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Book List</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <table>
+          <thead>
+            <tr>
+              <th>Book Title</th>
+              <th>Book Author</th>
+              <th>Book Genre</th>
+              <th>Book Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of userList">
+              <td>{{user.title}}</td>
+              <td>{{user.author}}</td>
+              <td>{{user.genre}}</td>
+              <td>{{user.price}}</td>
+              <td><ion-button color="warning" (click)="edit(user)">Edit</ion-button></td>
+            </tr>
+          </tbody>
+        </table>
+      </ion-card-content>
+    </ion-card>
+    <ion-button expand="block" color="primary" (click)="logout()">Log Out</ion-button>
   </div>
 </ion-content>
