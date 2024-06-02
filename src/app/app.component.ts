@@ -10,7 +10,6 @@ import { environment } from 'src/environments/environment';
 export class AppComponent {
   isUpdate = false;
   constructor(private  swUpdate: SwUpdate) {}
-
   async ngOninit(){
     await this.swUpdate.versionUpdates.subscribe;{() =>{
     this.swUpdate.checkForUpdate().then(newVersion => {

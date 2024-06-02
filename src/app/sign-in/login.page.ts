@@ -30,7 +30,7 @@ export class LoginPage implements OnInit {
     .catch ((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      this.alertP('Success', 'Invalid Password');
+      this.alertP('', 'Invalid Password');
 
     });
   }

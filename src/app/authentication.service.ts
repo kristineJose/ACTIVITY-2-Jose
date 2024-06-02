@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthenticationService {
-  authenticated: boolean = false;
+  
   constructor(private route: Router) { }
 
   setAuthentication(auth:boolean){
@@ -14,7 +14,7 @@ export class AuthenticationService {
     }
   } 
   canActivate(){
-   if(localStorage.getItem('loggedin') =='true'){
+   if(localStorage.getItem('loggedin') == 'true'){
       return true;
    } else{
     this.route.navigate(['sign-in']);
